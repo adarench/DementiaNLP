@@ -1,0 +1,56 @@
+DementiaNLP/
+│
+├── data/
+│   ├── raw/                   # Original, unprocessed data
+│   │   ├── transcripts/       # CHAT files (organized by group and task)
+│   │   │   ├── dementia/
+│   │   │   │   ├── cookie/
+│   │   │   │   ├── fluency/
+│   │   │   │   ├── recall/
+│   │   │   │   └── sentence/
+│   │   │   ├── control/
+│   │   │       ├── cookie/
+│   │   │       └── ...        # Other tasks
+│   │   ├── audio/             # Audio files (organized by group and task)
+│   │   │   ├── dementia/
+│   │   │   │   ├── cookie/
+│   │   │   │   ├── fluency/
+│   │   │   │   ├── recall/
+│   │   │   │   └── sentence/
+│   │   │   ├── control/
+│   │   │       ├── cookie/
+│   │   │       └── ...        # Other tasks
+│   │   └── demographics/      # Metadata (e.g., MMSE scores, age, diagnosis)
+│   │       └── PittCorpusDemographics.xlsx
+│   │
+│   ├── processed/             # Preprocessed data ready for analysis
+│       ├── transcripts/       # Cleaned transcripts (text only)
+│       ├── audio_features/    # Extracted features from audio (e.g., pauses, pitch)
+│       └── combined_features/ # Merged transcript and audio features
+│
+├── notebooks/                 # Jupyter notebooks for exploration and experiments
+│   ├── preprocess_transcripts.ipynb   # Clean and process CHAT transcripts
+│   ├── extract_features.ipynb         # Extract linguistic and prosodic features
+│   ├── exploratory_analysis.ipynb     # Visualize and explore feature patterns
+│   └── train_model.ipynb              # Train and evaluate machine learning models
+│
+├── scripts/                   # Python scripts for reusable logic
+│   ├── preprocess_transcripts.py      # Transcript preprocessing
+│   ├── extract_audio_features.py      # Extract features from audio files
+│   ├── merge_features.py              # Combine transcript and audio features
+│   └── train_model.py                 # Train and evaluate models
+│
+├── models/                    # Trained machine learning models
+│   ├── random_forest.pkl              # Example trained model
+│   ├── svm.pkl                       # Example trained model
+│   └── model_results/                # Evaluation metrics, confusion matrices, etc.
+│
+├── outputs/                   # Results, visualizations, and reports
+│   ├── plots/                        # Graphs and visualizations
+│   ├── reports/                      # Summarized findings and write-ups
+│   └── predictions/                  # Model predictions (e.g., classifications)
+│
+├── requirements.txt           # Python dependencies (e.g., pandas, librosa)
+├── README.md                  # Project overview and setup instructions
+├── .gitignore                 # Ignore unnecessary files (e.g., virtual env, data)
+└── environment.yml            # Conda environment file (optional, if using Conda)

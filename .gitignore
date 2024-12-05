@@ -1,0 +1,12 @@
+# Ignore virtual environments
+venv/
+.vscode/
+
+# Ignore data files
+data/raw/
+data/processed/
+
+# Ignore system files
+__pycache__/
+*.pyc
+.DS_Store
